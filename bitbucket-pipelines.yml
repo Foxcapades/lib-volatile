@@ -1,0 +1,12 @@
+image: frekele/java:jdk8
+
+pipelines:
+  branches:
+    master:
+      - step:
+          script:
+            - ./gradlew build bintrayUpload
+    development:
+      - step:
+          script:
+            - ./gradlew build
