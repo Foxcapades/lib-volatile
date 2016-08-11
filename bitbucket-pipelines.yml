@@ -5,8 +5,8 @@ pipelines:
     master:
       - step:
           script:
-            - ./gradlew build bintrayUpload
+            - chmod +x gradlew && ./gradlew build bintrayUpload
     development:
       - step:
           script:
-            - ./gradlew build
+            - chmod +x gradlew && ./gradlew build
