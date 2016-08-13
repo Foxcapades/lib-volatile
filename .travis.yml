@@ -1,9 +1,11 @@
 language: java
 
 jdk:
-- oraclejdk6
 - oraclejdk7
 - oraclejdk8
+
+script:
+- gradlew build
 
 after_success:
 - gradlew bintrayUpload
